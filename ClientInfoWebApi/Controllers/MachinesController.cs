@@ -26,7 +26,7 @@ namespace ClientInfoWebApi.Controllers
         {
             JObject jobject = JObject.Parse(obj.ToString());
             var clientMachine = JsonConvert.DeserializeObject<Machine>(jobject.ToString());
-            if (!machineList.Any(h => h._HardDrivers == clientMachine._HardDrivers))
+            if (!machineList.Any(h => h._MacAddress == clientMachine._MacAddress))
                 machineList.Add(clientMachine);
         }
 
