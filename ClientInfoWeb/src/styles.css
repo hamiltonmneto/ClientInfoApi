@@ -30,14 +30,14 @@ body{
   font-size: 18px;
 }
 
-.header ul {
+header ul {
   list-style-type: none;
   text-align: center;
   margin: 0;
   padding: 60px;
 }
 
-.header li {
+header li {
   padding-left: 15px;
   text-align: center;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ body{
   font-size: 27px;
 }
 
-.header li a {
+header li a {
   color: white;
   text-align: right;
   padding: 14px 16px;
@@ -57,7 +57,7 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-.header{
+header{
   grid-template-columns: 800px 500px 500px;
   display: grid;
   background-color:#0E67DB;
@@ -66,19 +66,30 @@ li a:hover:not(.active) {
   border-bottom: #707070 solid 1px;
 }
 
-.content{
+section{
   height: 150px;
   width: 100%;
 }
 
-.content ul{
+section ul{
   height: 150px;
   width: 100%;
 }
 
-.content li{
-  padding: 100px;
-  margin: 50px 200px 50px 200px;
+section li{
+  padding: 50px;
+  margin: 25px 200px 50px 200px;
+  float: left;
+  border: gray solid 1px;
+  list-style-type: none;
+  border-radius: 25px;
+  box-shadow: 1px 2px gray;
+}
+
+button{
+  color: white;
+  padding: 50px;
+  margin: 25px 200px 50px 200px;
   float: left;
   border: gray solid 1px;
   list-style-type: none;
@@ -92,7 +103,7 @@ right padding is 50px
 bottom padding is 75px
 left padding is 100px */
 
-.footer{
+footer{
   background-color:#0E67DB;
   position: absolute;
   height: 100px;
@@ -100,7 +111,7 @@ left padding is 100px */
   bottom:0;
 }
 
-.footer h4{
+footer h4{
   padding-top: 15px;
   color: #FFFFFF;
   text-align: center;

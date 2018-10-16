@@ -130,3 +130,6 @@ F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csproj.CoreC
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csproj.CopyComplete
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.dll
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.pdb
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Cors.dll
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.Cors.dll
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.Cors.xml
