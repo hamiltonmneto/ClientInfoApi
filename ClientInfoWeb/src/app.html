@@ -1,4 +1,5 @@
 <template>
+  <require from="./styles.css"></require>
   <div class="container">
     <header>
       <div class="logo">
@@ -6,17 +7,13 @@
         <h2>A simple and easy remote monitoring system.</h2>       
       </div>
       <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a route-href="home">Home</a></li>
+          <li><a route-href="contact">Contact</a></li>
+          <li><a route-href="about">About</a></li>
         </ul> 
     </header>
-    <require from="./styles.css"></require>
     <section>
-      <ul>
-          <button click.delegate = "getData()"><img src="images/report.png" /></button>
-          <button click.delegate = "getData()"><img src="images/connect.png" /></button>
-      </ul> 
+      <router-view></router-view>
     </section>
     <footer>
       <h4>Copyright © My Monitor System - Powered by Hamilton Monteiro</h4>

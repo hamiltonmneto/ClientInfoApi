@@ -1,0 +1,26 @@
+<template>
+    <require from="./styles.css"></require>
+    <div class="form">
+        <table>
+                <thead>
+                    <tr>
+                        <th>IP</th>
+                        <th>Computer Name</th>
+                        <th>Last User Loggued</th>
+                        <th>Windows Version</th>
+                        <th>Mac Adress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr repeat.for="rec of records">
+                        
+                        <td data-column="IP">${rec._IP}</td>
+                        <td data-column="Name">${rec._Name}</td>
+                        <td data-column="LogguedUser">${rec._LogguedUser}</td>
+                        <td data-column="OsVersion">${rec._OsVersion}</td>
+                        <td data-column="MacAddress">${rec._MacAddress}</td>
+                    </tr>
+                </tbody>
+            </table>        
+    </div>
+</template>
