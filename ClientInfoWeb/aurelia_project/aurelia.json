@@ -42,6 +42,9 @@
           "node_modules/requirejs/require.js"
         ],
         "dependencies": [
+          "jquery",
+          "moment",
+          "text-encoding-utf-8",
           "aurelia-binding",
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
@@ -84,7 +87,105 @@
             "path": "../node_modules/aurelia-fetch-client/dist/amd",
             "main": "aurelia-fetch-client"
           },
-          "text"
+          "text",
+          {
+            "name": "i18next",
+            "path": "../node_modules/i18next/dist/umd",
+            "main": "i18next"
+          },
+          {
+            "name": "aurelia-i18n",
+            "path": "../node_modules/aurelia-i18n/dist/amd",
+            "main": "aurelia-i18n"
+          },
+          {
+            "name": "i18next-xhr-backend",
+            "path": "../node_modules/i18next-xhr-backend/dist/umd",
+            "main": "i18nextXHRBackend"
+          },
+          {
+            "name": "aurelia-templating-resources",
+            "path": "../node_modules/aurelia-templating-resources/dist/amd",
+            "main": "aurelia-templating-resources"
+          },
+          {
+            "name": "aurelia-templating-router",
+            "path": "../node_modules/aurelia-templating-router/dist/amd",
+            "main": "aurelia-templating-router"
+          },
+          {
+            "name": "aurelia-testing",
+            "path": "../node_modules/aurelia-testing/dist/amd",
+            "main": "aurelia-testing",
+            "env": "dev"
+          },
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist",
+            "main": "js/bootstrap.bundle.min",
+            "deps": [
+              "jquery"
+            ],
+            "exports": "$",
+            "resources": [
+              "css/bootstrap.css"
+            ]
+          },
+          {
+            "name": "flatpickr",
+            "path": "../node_modules/flatpickr/dist",
+            "main": "flatpickr.min",
+            "resources": [
+              "flatpickr.min.css"
+            ]
+          },
+          {
+            "name": "lodash.isequal",
+            "path": "../node_modules/lodash.isequal",
+            "main": "index"
+          },
+          {
+            "name": "multiple-select",
+            "path": "../node_modules/aurelia-slickgrid/dist/lib/multiple-select",
+            "main": "multiple-select",
+            "resources": [
+              "multiple-select.css"
+            ]
+          },
+          {
+            "name": "aurelia-slickgrid",
+            "path": "../node_modules/aurelia-slickgrid/dist/amd",
+            "main": "index",
+            "resources": [
+              "**/*.{css,html}"
+            ]
+          },
+          {
+            "name": "jquery-event",
+            "path": "../node_modules/slickgrid/lib",
+            "main": "jquery.event.drag-2.3.0"
+          },
+          {
+            "name": "jquery-ui-dist",
+            "path": "../node_modules/jquery-ui-dist",
+            "main": "jquery-ui"
+          },
+          {
+            "name": "slickgrid",
+            "main": "slick.grid",
+            "path": "../node_modules/slickgrid",
+            "deps": [
+              "jquery",
+              "jquery-event",
+              "jquery-ui-dist"
+            ]
+          },
+          {
+            "name": "dompurify",
+            "main": "dist/purify",
+            "path": "../node_modules/dompurify",
+            "resources": []
+          }
         ]
       }
     ],

@@ -1,10 +1,10 @@
 <template>
     <require from="./styles.css"></require>
-    <div class="center">
-        <ul>
-            <img src="images/connect.png" />            
-            <a route-href="machine-list" class="machine-list">Check Computer List</a>
-            <!-- <button click.delegate = "getData()"><img src="images/report.png" /></button> -->
-        </ul>
-    </div> 
+    <div class="col-lg-8 mx-auto">
+        <h2 class="text-center">Start-up</h2>
+        <p class="text-center">Click on the button bellow and start monitoring you machines.</p>
+        <div class="text-center">
+            <a route-href="machine-list" class="btn btn-primary btn-lg raised">Start</a>
+        </div>
+    </div>
 </template>

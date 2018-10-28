@@ -1,76 +1,82 @@
-table { 
-    width: 750px; 
-    border-collapse: collapse; 
-    margin:50px auto;
-    }
-
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-    background: #eee; 
-    }
-
-th { 
-    background: #3498db; 
-    color: white; 
-    font-weight: bold; 
-    }
-
-td, th { 
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    text-align: left; 
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+    
+  .btn-lg {
     font-size: 18px;
-    }
-
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-    table { 
-        width: 100%; 
-    }
-
-    /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr { 
-        display: block; 
-    }
-    
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr { 
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    
-    tr { border: 1px solid #ccc; }
-    
-    td { 
-        /* Behave  like a "row" */
-        border: none;
-        border-bottom: 1px solid #eee; 
-        position: relative;
-        padding-left: 50%; 
-    }
-
-    td:before { 
-        /* Now like a table header */
-        position: absolute;
-        /* Top/left values mimic padding */
-        top: 6px;
-        left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
-        white-space: nowrap;
-        /* Label the data */
-        content: attr(data-column);
-
-        color: #000;
-        font-weight: bold;
-    }
-
-}
+    line-height: 1.33;
+    border-radius: 6px;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+  }
+  
+  /***********************
+    RAISED BUTTONS
+  ************************/
+  .btn-primary.raised {
+      box-shadow: 0 3px 0 0 #007299;
+  }
+  .btn-primary.raised:active, .btn-primary.raised.active {
+      background: #33a6cc;
+      box-shadow: none;
+      margin-bottom: -3px;
+      margin-top: 3px;
+  }
+  
+  /***********************
+    CUSTON BTN VALUES
+  ************************/
+  
+  .btn {
+      padding: 14px 24px;
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+      outline: 0 none;
+  }
+  
+  .btn-primary {
+      background: #0099cc;
+      color: #ffffff;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+      background: #33a6cc;
+  }
+  .btn-primary:active, .btn-primary.active {
+      background: #007299;
+      box-shadow: none;
+  }
