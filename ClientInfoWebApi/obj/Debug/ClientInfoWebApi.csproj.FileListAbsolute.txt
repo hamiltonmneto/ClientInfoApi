@@ -125,7 +125,6 @@ F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\Newtonsoft.Json.xml
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Net.Http.Formatting.xml
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.xml
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.WebHost.xml
-F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csprojResolveAssemblyReference.cache
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csproj.CoreCompileInputs.cache
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csproj.CopyComplete
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.dll
@@ -133,3 +132,6 @@ F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.pdb
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Cors.dll
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.Cors.dll
 F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\System.Web.Http.Cors.xml
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\Microsoft.AspNet.SignalR.Client.dll
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\bin\Microsoft.AspNet.SignalR.Client.xml
+F:\Fontes\ClientInfoApi\ClientInfoWebApi\obj\Debug\ClientInfoWebApi.csprojAssemblyReference.cache

@@ -185,6 +185,12 @@
             "main": "dist/purify",
             "path": "../node_modules/dompurify",
             "resources": []
+          },
+          {
+            "name": "aurelia-dialog",
+            "path": "../node_modules/aurelia-dialog/dist/amd",
+            "main": "aurelia-dialog",
+            "resources": ["resources/*.js"]
           }
         ]
       }

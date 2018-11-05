@@ -4,4 +4,5 @@ export class MachineViewModel{
     public LogguedUser: any;
     public OsVersion: any;
     public MacAddress: any;
+    
 }

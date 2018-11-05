@@ -1,6 +1,8 @@
 import {HttpClient} from 'aurelia-fetch-client';
 import { autoinject } from 'aurelia-framework';
 import { MachineViewModel } from "../view-models/machine-view-model"
+import {DialogService} from 'aurelia-dialog';
+import { Connection } from '../connection-modal/connection';
 
 @autoinject
 export class MachineList{
@@ -9,13 +11,14 @@ export class MachineList{
     columnDefinitions;
     dataset : any[];
     machine : MachineViewModel;
-
+    dialogService : DialogService;
     selectedTitle : '';
   
-
+    selected : any[];
     records: any[];
 
-    constructor( private http: HttpClient ){
+    constructor( private http: HttpClient, dialogService : DialogService ){
+        this.dialogService = dialogService;
         this.defineGrid();
         http.configure(config => {
             config
@@ -58,10 +61,15 @@ export class MachineList{
     }
 
     onGrid1SelectedRowsChanged(e, args) {
+      var machine = new MachineViewModel();
         const grid = args && args.grid;
         if (Array.isArray(args.rows)) {
           this.selectedTitle = args.rows.map(idx => {
             const item = grid.getDataItem(idx);
+            machine.Ip = item._IP;
+            machine.MacAddress = item._MacAddress;
+            machine.Name = item._Name;
+            this.machine = machine;
             return item._MacAddress || '';
           });
         }
@@ -81,5 +89,16 @@ export class MachineList{
             _MacAddress: this.records[i]._MacAddress
             };
         }
+    }
+
+    connectMachine(){
+      this.dialogService.open({ viewModel: Connection, model: this.machine, lock: false }).whenClosed(response => {
+        if (!response.wasCancelled) {
+          console.log('good');
+        } else {
+          console.log('bad');
+        }
+        console.log(response.output);
+      });
     }
 }

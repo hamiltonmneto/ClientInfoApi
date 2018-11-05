@@ -1,4 +1,4 @@
-import {Aurelia} from 'aurelia-framework'
+import {Aurelia, PLATFORM} from 'aurelia-framework'
 import environment from './environment';
 import { I18N, TCustomAttribute } from 'aurelia-i18n';
 import Backend from 'i18next-xhr-backend';
@@ -8,6 +8,11 @@ export function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
     .feature('resources');
+
+    aurelia.use
+    .standardConfiguration()
+    .developmentLogging()
+    .plugin(PLATFORM.moduleName('aurelia-dialog'));
 
     aurelia.use.plugin('aurelia-slickgrid', config => {
       // change any of the default global options

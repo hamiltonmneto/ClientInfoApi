@@ -1,0 +1,23 @@
+<template>
+    <ux-dialog class="connection">
+      <ux-dialog-header class="connection__header">
+          <div class="modal-header">
+            <h5 class="connection" id="exampleModalLongTitle">${machine.Name}</h5>
+          </div>
+      </ux-dialog-header>
+      <ux-dialog-body class="connection__body">
+
+        <div class="modal-content">
+        </div>
+        <div class="modal-body">
+          <input type="text" value.bind="command" class="form-control" id="usr">
+        </div>
+
+      </ux-dialog-body>
+      <ux-dialog-footer class="connection__footer">
+        <div class="modal-footer">
+          <button type="button" click.delegate="sendCommand()" class="btn btn-primary">Send</button>
+        </div>
+      </ux-dialog-footer>
+    </ux-dialog>
+</template>
