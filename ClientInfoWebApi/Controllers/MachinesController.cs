@@ -19,6 +19,12 @@ namespace ClientInfoWebApi.Controllers
     {
         private static List<Machine> machineList = new List<Machine>();
 
+        public HubConnection GetHubConnection(string url)
+        {
+            var connection = new HubConnection(url);
+            return connection;
+        }
+
         [HttpGet]
         public List<Machine> GetMachines()
         {
@@ -36,12 +42,20 @@ namespace ClientInfoWebApi.Controllers
 
 
         [Route("PostCommandAsync")]
-        public async Task PostCommandAsync(string macAdress, string ipAdress ,string command)
+        public string PostCommandAsync(string macAdress, string ipAdress ,string command)
         {
-            var connection = new HubConnection("http://" + ipAdress + ":6969/"+ macAdress + "/signalr");
-            IHubProxy hubProxy = connection.CreateHubProxy("CommandHub");
-            await connection.Start(new WebSocketTransport());
-            await hubProxy.Invoke("CommandExec", command);
+            try
+            {
+                var connection = new HubConnection("http://" + ipAdress + ":6969/"+ macAdress + "/signalr");
+                IHubProxy hubProxy = connection.CreateHubProxy("CommandHub");
+                connection.Start().Wait();
+                return hubProxy.Invoke<string>("CommandExec", command).Result;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
     }

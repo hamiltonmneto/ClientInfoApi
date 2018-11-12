@@ -3,6 +3,10 @@ import { autoinject } from 'aurelia-framework';
 import { MachineViewModel } from "../view-models/machine-view-model"
 import {DialogService} from 'aurelia-dialog';
 import { Connection } from '../connection-modal/connection';
+// import "signalr";
+import * as $ from "jquery";
+// import { hubConnection } from "signalr-no-jquery";
+// import * as $ from "aspsignalr";
 
 @autoinject
 export class MachineList{
@@ -69,6 +73,15 @@ export class MachineList{
             machine.Ip = item._IP;
             machine.MacAddress = item._MacAddress;
             machine.Name = item._Name;
+            // const connection = hubConnection();
+            // const t = $.hubConnection("http://" + item._IP + ":6969/"+ item._MacAddress);
+            // var commandProxy = t.createHubProxy('CommandHub');
+            // t.start().done(function() {
+            //   // Wire up Send button to call NewContosoChatMessage on the server.
+            //   commandProxy.invoke("CommandExec", "dir");
+            //   });
+            // commandProxy.invoke("CommandExec", "dir");
+            // machine.Connection  = $.hubConnection("http://" + item._IP + ":6969/"+ item._MacAddress);
             this.machine = machine;
             return item._MacAddress || '';
           });

@@ -191,6 +191,51 @@
             "path": "../node_modules/aurelia-dialog/dist/amd",
             "main": "aurelia-dialog",
             "resources": ["resources/*.js"]
+          },
+          {
+            "name": "signalr",
+            "path": "../node_modules/@types/signalr",
+            "main": "index.d"
+          },
+          {
+            "name": "jquery-core",
+            "path": "../node_modules/jquery-deferred/lib",
+            "main": "jquery-core"
+          },
+          {
+            "name": "jquery-callbacks",
+            "path": "../node_modules/jquery-callbacks",
+            "main": "Callbacks",
+            "deps": [
+              "jquery-core"
+            ]
+          },
+          {
+            "name": "jquery-deferred",
+            "path": "../node_modules/jquery-deferred/lib",
+            "main": "jquery-deferred",
+            "deps": [
+              "jquery-callbacks"
+            ]
+          },
+          {
+            "name": "jquery-param",
+            "path": "../node_modules/jquery-param",
+            "main": "jquery-param"
+          },
+          {
+            "name": "signalr-no-jquery",
+            "path": "../node_modules/signalr-no-jquery/src",
+            "main": "jQueryShim",
+            "deps": [
+              "jquery-deferred",
+              "jquery-param"
+            ]
+          },
+          {
+            "name": "aspsignalr",
+            "path": "../node_modules/signalr",
+            "main": "jquery.signalR"
           }
         ]
       }
